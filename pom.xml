@@ -22,6 +22,10 @@
 
     <modules>
         <module>monitor-common</module>
+        <module>collector</module>
+        <module>judge</module>
+        <module>sender</module>
+        <module>store</module>
     </modules>
 
     <dependencies>
