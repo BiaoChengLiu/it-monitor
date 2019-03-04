@@ -26,6 +26,7 @@
         <module>judge</module>
         <module>sender</module>
         <module>store</module>
+        <module>common</module>
     </modules>
 
     <dependencies>
