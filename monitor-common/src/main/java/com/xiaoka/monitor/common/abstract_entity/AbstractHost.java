@@ -7,6 +7,7 @@ import lombok.Data;
  */
 @Data
 public class AbstractHost {
+
     /**
      * 主机名称
      */
