@@ -1,7 +1,7 @@
 package com.xiaoka.monitor.common.abstract_entity;
 
 /**
- * 工程
+ * 主机抽象类
  */
 public class AbstractHost {
 
