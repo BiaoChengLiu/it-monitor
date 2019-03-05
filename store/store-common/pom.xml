@@ -13,5 +13,15 @@
     <artifactId>store-common</artifactId>
     <version>1.0</version>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.xiaoka.monitor</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 </project>

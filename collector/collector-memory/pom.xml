@@ -13,5 +13,12 @@
     <artifactId>collector-memory</artifactId>
     <version>1.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.xiaoka.monitor</groupId>
+            <artifactId>collector-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

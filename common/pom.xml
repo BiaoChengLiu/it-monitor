@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>monitor</artifactId>
+        <artifactId>it-monitor</artifactId>
         <groupId>com.xiaoka.monitor</groupId>
         <version>1.0</version>
     </parent>
@@ -12,6 +12,19 @@
     <groupId>com.xiaoka.monitor</groupId>
     <artifactId>common</artifactId>
     <version>1.0</version>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ustcinfo.ishare.eip</groupId>
+            <artifactId>eip-si-cache-inner</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
