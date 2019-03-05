@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xiaoka.monitor</groupId>
-    <artifactId>monitor</artifactId>
+    <artifactId>it-monitor</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
 
@@ -21,7 +21,6 @@
     </properties>
 
     <modules>
-        <module>monitor-common</module>
         <module>collector</module>
         <module>judge</module>
         <module>sender</module>
