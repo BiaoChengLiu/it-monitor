@@ -26,6 +26,7 @@
         <module>sender</module>
         <module>store</module>
         <module>common</module>
+        <module>api</module>
     </modules>
 
     <dependencyManagement>
