@@ -12,7 +12,9 @@
     <groupId>com.xiaoka.monitor</groupId>
     <artifactId>sender</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>${parent.version}</version>
+
+
     <modules>
         <module>sender-common</module>
         <module>sender-memory</module>

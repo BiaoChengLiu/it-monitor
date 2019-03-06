@@ -11,7 +11,7 @@
 
     <groupId>com.xiaoka.monitor</groupId>
     <artifactId>collector-memory</artifactId>
-    <version>1.0</version>
+    <version>${parent.version}</version>
 
     <dependencies>
         <dependency>

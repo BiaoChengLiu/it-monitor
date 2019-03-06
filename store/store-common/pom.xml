@@ -11,7 +11,9 @@
 
     <groupId>com.xiaoka.monitor</groupId>
     <artifactId>store-common</artifactId>
-    <version>1.0</version>
+    <version>${parent.version}</version>
+
+
 
     <dependencies>
         <dependency>

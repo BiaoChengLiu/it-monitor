@@ -1,7 +1,8 @@
-package com.xiaoka.monitor.collector.common;
+package com.xiaoka.monitor.collector.common.bean;
 
 import com.alibaba.fastjson.JSON;
 import com.xiaoka.monitor.cache.AgentMetric;
+import com.xiaoka.monitor.collector.common.ICollector;
 import org.apache.camel.Exchange;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
 /**
  * 消息处理器
  */
-@Component
+@Component("collectorProcessor")
 public class CollectorProcessor {
 
     private Logger logger = LoggerFactory.getLogger(getClass());

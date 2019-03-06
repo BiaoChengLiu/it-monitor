@@ -12,7 +12,9 @@
     <groupId>com.xiaoka.monitor</groupId>
     <artifactId>store</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>${parent.version}</version>
+
+
     <modules>
         <module>store-common</module>
         <module>store-mysql</module>

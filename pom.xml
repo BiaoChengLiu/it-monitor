@@ -18,6 +18,8 @@
     <!--定义属性-->
     <properties>
         <camel.version>2.18.0</camel.version>
+        <groovy.version>2.4.7</groovy.version>
+        <lombok.version>1.18.4</lombok.version>
     </properties>
 
     <modules>
@@ -29,13 +31,14 @@
         <module>api</module>
     </modules>
 
+    <!--定义依赖以及版本-->
     <dependencyManagement>
         <dependencies>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.4</version>
+                <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -51,7 +54,11 @@
                 <version>${camel.version}</version>
             </dependency>
 
-
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>${groovy.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

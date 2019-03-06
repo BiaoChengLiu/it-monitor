@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * 基于内部缓存的收集器实现
  */
 @Component
-public class InnerCollector implements ICollector {
+public class MemoryCollector implements ICollector {
 
     @Autowired
     private ICache cache;

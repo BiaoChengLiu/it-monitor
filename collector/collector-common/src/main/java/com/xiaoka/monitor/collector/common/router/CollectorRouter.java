@@ -1,4 +1,4 @@
-package com.xiaoka.monitor.collector.common;
+package com.xiaoka.monitor.collector.common.router;
 
 import org.apache.camel.builder.RouteBuilder;
 
@@ -12,6 +12,6 @@ public class CollectorRouter extends RouteBuilder {
         /**
          * 收集器上发的地址
          */
-        from("jetty:http://localhost:8888/eip").to("bean:collector?method=process");
+        from("jetty:http://localhost:8888/eip").to("bean:collectorProcessor?method=process");
     }
 }

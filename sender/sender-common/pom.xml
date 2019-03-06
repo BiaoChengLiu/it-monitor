@@ -11,7 +11,7 @@
 
     <groupId>com.xiaoka.monitor</groupId>
     <artifactId>sender-common</artifactId>
-    <version>1.0</version>
+    <version>${parent.version}</version>
 
     <dependencies>
         <dependency>
@@ -22,7 +22,6 @@
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>2.4.7</version>
         </dependency>
         <dependency>
             <groupId>com.xiaoka.monitor</groupId>
