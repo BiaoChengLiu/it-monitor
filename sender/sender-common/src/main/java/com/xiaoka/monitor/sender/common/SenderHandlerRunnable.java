@@ -10,6 +10,7 @@ import com.xiaoka.monitor.cache.TeamCache;
 import com.xiaoka.monitor.constant.AlarmSenderType;
 import com.xiaoka.monitor.store.common.AlarmLog;
 import com.xiaoka.monitor.store.common.IAlarmLogService;
+import com.xiaoka.monitor.utils.SpringContextUtils;
 import groovy.lang.Binding;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.Script;
@@ -50,13 +51,9 @@ public class SenderHandlerRunnable implements Runnable {
      * 需要发送的告警事件
      */
     private AlarmEventCache alarmEvent;
-    private ICache cache;
-    private IAlarmLogService alarmLogService;
 
-    public SenderHandlerRunnable(AlarmEventCache alarmEventCache, ICache cache, IAlarmLogService alarmLogService) {
+    public SenderHandlerRunnable(AlarmEventCache alarmEventCache) {
         this.alarmEvent = alarmEventCache;
-        this.cache = cache;
-        this.alarmLogService = alarmLogService;
     }
 
     @Override
@@ -64,6 +61,7 @@ public class SenderHandlerRunnable implements Runnable {
         /**
          * 获取接收者或发送者
          */
+        ICache cache = SpringContextUtils.getBean(ICache.class);
         String receiverId = alarmEvent.getReceiverId();
         ReceiverCache receiver = cache.get(ReceiverCache.class, receiverId);
         if (receiver == null) {
@@ -151,6 +149,7 @@ public class SenderHandlerRunnable implements Runnable {
                 e.printStackTrace();
                 alarmLog.setErrorStack(e.getMessage());
             }
+            IAlarmLogService alarmLogService = SpringContextUtils.getBean(IAlarmLogService.class);
             // 持久化告警日志
             alarmLogService.save(alarmLog);
         }

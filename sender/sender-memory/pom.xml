@@ -13,5 +13,12 @@
     <artifactId>sender-memory</artifactId>
     <version>${parent.version}</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.xiaoka.monitor</groupId>
+            <artifactId>sender-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

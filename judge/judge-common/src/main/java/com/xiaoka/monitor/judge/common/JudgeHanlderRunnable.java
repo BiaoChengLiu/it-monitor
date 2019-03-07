@@ -6,6 +6,7 @@ import com.ustcinfo.ishare.eip.si.cache.common.ICache;
 import com.xiaoka.monitor.abstract_entity.AbstractBaseAlarmRule;
 import com.xiaoka.monitor.cache.*;
 import com.xiaoka.monitor.judge.common.function.RuleExpressionFunction;
+import com.xiaoka.monitor.utils.SpringContextUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,17 +22,15 @@ public class JudgeHanlderRunnable implements Runnable {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     private AgentMetric agentMetric;
-    private ICache cache;
-    private IAlarmEventPush alarmEventPush;
 
-    public JudgeHanlderRunnable(AgentMetric agentMetric, ICache cache, IAlarmEventPush alarmEventPush) {
+    public JudgeHanlderRunnable(AgentMetric agentMetric) {
         this.agentMetric = agentMetric;
-        this.cache = cache;
-        this.alarmEventPush = alarmEventPush;
     }
 
     @Override
     public void run() {
+
+        ICache cache = SpringContextUtils.getBean(ICache.class);
         //关联的主机
         HostCache hostCache = cache.get(HostCache.class, agentMetric.getHostId());
         if (hostCache == null) {
@@ -224,7 +223,7 @@ public class JudgeHanlderRunnable implements Runnable {
         }
 
         //生成告警事件
-
+        IAlarmEventPush alarmEventPush = SpringContextUtils.getBean(IAlarmEventPush.class);
         Set<Map.Entry<String, StringBuffer>> alarmEventSet = alarmEventMap.entrySet();
         for (Map.Entry<String, StringBuffer> m : alarmEventSet) {
             // 还原数据

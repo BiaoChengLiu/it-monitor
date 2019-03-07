@@ -11,15 +11,10 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 
 /**
- * judge组件
+ * 基于内置队列的judge组件
  */
 @Component
-public class JudgeComponent {
-
-    @Autowired
-    private ICache cache;
-    @Autowired
-    private IAlarmEventPush alarmEventPush;
+public class MemoryJudgeComponent {
 
     /**
      * 初始化bean的时候执行
@@ -38,12 +33,12 @@ public class JudgeComponent {
                             Thread.sleep(time);
                             continue;
                         }
-                        MonitorContext.AGENT_METRIC_JUDGE_POOL.execute(new JudgeHanlderRunnable(agentMetric, cache, alarmEventPush));
+                        MonitorContext.AGENT_METRIC_JUDGE_POOL.execute(new JudgeHanlderRunnable(agentMetric));
                     } catch (Exception e) {
+                        e.printStackTrace();
                         try {
                             Thread.sleep(time);
                         } catch (InterruptedException e1) {
-                            e1.printStackTrace();
                         }
                     }
                 }
