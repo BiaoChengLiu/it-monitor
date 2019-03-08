@@ -24,6 +24,20 @@
             <artifactId>eip-si-cache-inner</artifactId>
             <version>1.0</version>
         </dependency>
+
+        <!-- shell -->
+        <dependency>
+            <groupId>ch.ethz.ganymed</groupId>
+            <artifactId>ganymed-ssh2</artifactId>
+            <version>build210</version>
+        </dependency>
+        <!-- 控制台连接 -->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.54</version>
+        </dependency>
+
     </dependencies>
 
 
