@@ -21,7 +21,6 @@ public class MonitorContext {
      * 处理指标线程池
      */
     public static final ExecutorService AGENT_METRIC_JUDGE_POOL = Executors.newFixedThreadPool(50);
-
     /**
      * 等待发送的告警队列
      */

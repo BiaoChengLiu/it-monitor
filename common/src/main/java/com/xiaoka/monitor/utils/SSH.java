@@ -1,7 +1,6 @@
 package com.xiaoka.monitor.utils;
 
 import ch.ethz.ssh2.Connection;
-import ch.ethz.ssh2.ConnectionInfo;
 import com.google.common.collect.Lists;
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelShell;
@@ -9,7 +8,6 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 import com.xiaoka.monitor.constant.ResponseCode;
 import com.xiaoka.monitor.vo.Resp;
-import jdk.nashorn.internal.objects.Global;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

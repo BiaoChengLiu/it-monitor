@@ -23,8 +23,7 @@ public class AlarmRuleItem {
      * 组件告警规则ID
      */
     private String agentRuleId;
-
-
+    
     /**
      * 告警类型
      */
